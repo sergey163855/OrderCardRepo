@@ -18,6 +18,7 @@ public class orderCardTest {
 
     @BeforeAll
     public static void setupAll() {
+
         WebDriverManager.chromedriver().setup();
     }
 
@@ -39,7 +40,7 @@ public class orderCardTest {
 
     @Test
     public void shouldBeSuccessfulForm() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван Иванович");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
