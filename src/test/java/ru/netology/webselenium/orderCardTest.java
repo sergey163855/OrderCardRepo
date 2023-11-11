@@ -44,7 +44,7 @@ public class orderCardTest {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        var actualText = driver.findElement(By.cssSelector("[data-test-io=order-success]")).getText().trim();
+        var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время", actualText);
     }
 }
