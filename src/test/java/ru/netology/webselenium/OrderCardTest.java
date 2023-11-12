@@ -41,7 +41,7 @@ public class OrderCardTest {
     @Test
     public void shouldBeSuccessfulForm() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван");
-        driver.findElement(By.cssSelector("data-test-id=phone] input")).sendKeys("+79270000000");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
         var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
